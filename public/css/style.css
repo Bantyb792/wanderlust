@@ -8,3 +8,25 @@
 .navbar{
     background-color: white;
 }
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links,.f-info-socials{
+    width:100%;
+    text-align: center;
+}
+.f-info-socials i{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+.f-info{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    background-color: #ebebeb;
+}
