@@ -1,3 +1,11 @@
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
 .fa-compass{
     color:#fe424d;
     font-size: 1.5rem;
@@ -55,4 +63,35 @@
 .card-img-overlay:hover{
     opacity:0.2;
     background-color: white;
+}
+.add-btn{
+    background-color:#fe424d;
+    border:none;
+}
+.save-btn{
+    background-color:#fe424d;
+    border:none;
+}
+.edit-btn{
+    background-color:#fe424d;
+    border:none;
+    color:white;
+}
+.delete-btn{
+    background-color:#fe424d;
+    border:none;
+    color:white;
+    margin-left: 2rem;
+}
+.btns{
+    display: flex;
+    width: 100vh;
+    margin-left: 18rem;
+}
+.show-img{
+    height: 30vh;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
 }
