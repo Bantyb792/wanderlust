@@ -5,6 +5,7 @@ const Listing=require("./models/listing.js")
 const path=require("path");
 const methodOverride = require("method-override");
 const ejsMate= require("ejs-mate");
+const wrapAsync=require("./utils/wrapAsync.js")
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
@@ -54,11 +55,11 @@ app.get("/listings/new",(req,res)=>{
 });
 
 //newdata save route
-app.post("/listings", async (req,res)=>{
+app.post("/listings", wrapAsync(async (req,res)=>{
     const newListing= new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listings");
-});
+}));
 
 //show route
 app.get("/listings/:id", async (req,res)=>{
@@ -90,6 +91,9 @@ app.delete("/listings/:id", async(req,res)=>{
     res.redirect("/listings");
 });
 
+app.use((err,req,res,next)=>{
+    res.send("something went wrong!");
+}); 
 
 app.listen(8080,()=>{
    console.log("app is listening");
