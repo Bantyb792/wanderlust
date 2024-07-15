@@ -1,13 +1,12 @@
 <% layout("/layouts/boilerplate.ejs")%>
 <div class="row">
     <div class="col-8 offset-3 mt-3">
-        <h3>Listing details</h3>
+        <h3><%=listing.title%></h3>
     </div>
         <div class="card col-6 offset-3 show-card">
             <img src="<%=listing.image%>" class="card-img-top show-img" alt="listing_image">
             <div class="card-body">
                 <p class="card-text">
-                   <b><%=listing.title%></b> <br>
                    <%=listing.description%> <br>
                    &#8377; <%=listing.price.toLocaleString("en-IN")%> <br>
                    <%=listing.location%> <br>
@@ -24,6 +23,21 @@
                     <button class="delete-btn btn">DELETE</button>
                 </form>
            
+        </div>
+        <div class="col-8 offset-3 mb-3">
+            <hr>
+            <h4>Leave a review</h4>
+            <form action="">
+                <div class="mb-3 mt-3">
+                    <label for="ratting" class="form-label">Ratting</label>
+                    <input type="range" min="1" max="5" id="ratting" name="review[ratting]" class="form-range">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="comment" class="form-label">Coments</label>
+                    <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control"></textarea>
+                    <button class="btn btn-outline-dark">Submit</button>
+                </div>
+            </form>
         </div>
         
 </div>
