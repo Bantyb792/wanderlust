@@ -35,7 +35,7 @@
                 <div class="mb-3 mt-3">
                     <label for="comment" class="form-label">Coments</label>
                     <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" required></textarea>
-                    <div class="invalid-feedback">Add some comment for review</div>
+                    <div class="invalid-feedback">Add some comment for review</div><br>
                     <button class="btn btn-outline-dark">Submit</button>
                 </div>
             </form>
@@ -49,6 +49,9 @@
                               <p class="card-text"><%=review.comment%></p>
                               <p class="card-text"><%=review.rating%> Stars</p>
                           </div>
+                          <form action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" class="mb-3" method="post">
+                            <button class="btn btn-sm btn-dark">DELETE</button>
+                          </form>
                      </div>
                   <%}%>     
             </div>
