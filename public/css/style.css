@@ -38,7 +38,7 @@ body{
     align-content: space-evenly;
     background-color: #ebebeb;
 }
-.card{
+.listing-card{
     border: none;
     margin-bottom: 2rem;
 }
