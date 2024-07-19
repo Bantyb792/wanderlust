@@ -1,14 +1,11 @@
 const express= require("express");
 const app=express();
 const mongoose=require("mongoose");
-const Listing=require("./models/listing.js");
 const path=require("path");
 const methodOverride = require("method-override");
 const ejsMate= require("ejs-mate");
-const wrapAsync=require("./utils/wrapAsync.js");
 const ExpressError=require("./utils/ExpressError.js");
-const {listingSchema,reviewScehma}= require("./schema.js");
-const Review=require("./models/review.js");
+const session = require("express-session")
 
 const listings=require("./routes/listing.js");
 const reviews=require("./routes/review.js");
@@ -21,8 +18,13 @@ app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
 
+const sessionOption={
+    secret:"mysupersecret",
+    resave: false,
+    saveUninitialized:true
+}
 
-
+app.use(session(sessionOption));
 
 mongoUrl="mongodb://127.0.0.1:27017/wanderlust";
 main().then(()=>{
