@@ -3,12 +3,10 @@ const router=express.Router();
 const wrapAsync=require("../utils/wrapAsync.js");
 const Listing=require("../models/listing.js");
 const {isLoggedIn, isOwner,validateListing} = require("../middleware.js");
+const listingController= require("../controllers/listing.js");
 
 //index route
-router.get("/", wrapAsync (async (req,res)=>{
-    const alllistings = await Listing.find({});
-    res.render("listings/index.ejs",{alllistings});
-}));
+router.get("/", wrapAsync(listingController.index) );
 
 //new route
 router.get("/new",isLoggedIn, (req,res)=>{
