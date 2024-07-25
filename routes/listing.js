@@ -12,7 +12,7 @@ router.route("/")
 // .post(isLoggedIn,validateListing,
 //     wrapAsync(listingController.createLisitng));//Create route
 .post(upload.single("listing[image]"),(req,res)=>{
-    res.send(req.file);
+    res.send(req.file); 
 });
 
 //new route
