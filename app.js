@@ -52,9 +52,9 @@ async function main(){
     await mongoose.connect(mongoUrl);
 };
 
-app.get("/",(req,res)=>{
-    res.send("connected");
-});
+// app.get("/",(req,res)=>{
+//     res.send("connected");
+// });
 
 app.use(session(sessionOption));
 app.use(flash());
