@@ -41,7 +41,9 @@ const sessionOption={
     },
 };
 
-mongoUrl="mongodb://127.0.0.1:27017/wanderlust";
+// mongoUrl="mongodb://127.0.0.1:27017/wanderlust";
+const dbUrl=process.env.ATLASDB_URL;
+
 main().then(()=>{
     console.log("database connected");
 }).catch((err)=>{
@@ -49,7 +51,7 @@ main().then(()=>{
 });
 
 async function main(){
-    await mongoose.connect(mongoUrl);
+    await mongoose.connect(dbUrl);
 };
 
 // app.get("/",(req,res)=>{
