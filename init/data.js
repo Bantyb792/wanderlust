@@ -10,6 +10,7 @@ const sampleListings = [
     price: 1500,
     location: "Malibu",
     country: "United States",
+    category:"room",
   },
   {
     title: "Modern Loft in Downtown",
@@ -22,6 +23,7 @@ const sampleListings = [
     price: 1200,
     location: "New York City",
     country: "United States",
+    category:"room",
   },
   {
     title: "Mountain Retreat",
@@ -34,6 +36,8 @@ const sampleListings = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    category:"iconic city",
+
   },
   {
     title: "Historic Villa in Tuscany",
@@ -46,6 +50,7 @@ const sampleListings = [
     price: 2500,
     location: "Florence",
     country: "Italy",
+    category:"iconic city",
   },
   {
     title: "Secluded Treehouse Getaway",

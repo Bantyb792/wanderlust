@@ -4,9 +4,9 @@
         <div class="col-8 offset-2"><br><br>
             <h3>Create your own List</h3>
             <form action="/listings" 
-            method="post" novalidate 
-            class="needs-validation" 
-            enctype="multipart/form-data">
+                 method="post" novalidate 
+                 class="needs-validation" 
+             enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="title" class="form-lable">Title</label>
                     <input type="text" name="listing[title]" placeholder="Enter title" class="form-control" required>
@@ -20,9 +20,8 @@
                     <div class="invalid-feedback">Description required</div>
             </div>
             <div class="mb-3">
-                <label for="image" class="form-lable">Upload Image</label>
+                <label for="image" class="form-lable">Upload Image </label>
                 <input type="file" name="listing[image]" class="form-control">
-                required
             </div>  
             <div class="row">
                 <div class="mb-3 col-md-4">
@@ -44,6 +43,24 @@
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Location required</div>
             </div>  
+          <div class="mb-3">
+                <label for="category" class="form-lable" required>Type of place</label>
+                <select name="listing[category]">
+                    <option value="select">Select</option>
+                    <option value="room">Room</option>
+                    <option value="iconic City">Iconic Citie</option>
+                    <option value="mountains">Mountain</option>
+                    <option value="castle">Castle</option>
+                    <option value="sea">Sea</option>
+                    <option value="amaizing Pool">Amaizing Pool</option>
+                    <option value="camping">Camping</option>
+                    <option value="farm">Farms</option>
+                    <option value="arctic">Arctic</option>
+                    <option value="domes">Dome</option>
+                    <option value="boat">Boat</option>
+                    <option value="other">other..</option>
+                </select>
+            </div>
             <br><br>  
                 <button class="btn btn-dark  add-btn">Add</button>
             </form>
