@@ -47,6 +47,24 @@
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Location required</div>
             </div>  
+            <div class="mb-3">
+                <label for="category" class="form-lable" required>Type of place</label>
+                <select name="listing[category]">
+                    <option value="<%=listing.category%>"><%=listing.category%></option>
+                    <option value="room">Room</option>
+                    <option value="iconicCity">Iconic Citie</option>
+                    <option value="mountains">Mountain</option>
+                    <option value="castle">Castle</option>
+                    <option value="sea">Sea</option>
+                    <option value="amaizingPool">Amaizing Pool</option>
+                    <option value="camping">Camping</option>
+                    <option value="farm">Farms</option>
+                    <option value="arctic">Arctic</option>
+                    <option value="domes">Dome</option>
+                    <option value="boat">Boat</option>
+                    <option value="other">other..</option>
+                </select>
+            </div>
             <br><br>  
                 <button class="btn btn-dark save-btn">Save</button>
             </form>
