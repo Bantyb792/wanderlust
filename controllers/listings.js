@@ -10,6 +10,10 @@ module.exports.renderNewForm= (req,res)=>{
     res.render("listings/new.ejs")
 };
 
+module.exports.testing=(req,res)=>{
+    res.send("helllo")
+};
+
 module.exports.showListing=async (req,res)=>{
     let {id}=req.params;
     const listing= await Listing.findById(id)
